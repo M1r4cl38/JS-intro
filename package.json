@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "typeof": "nodemon ./js/07-typeof.js",
     "boolean": "nodemon ./js/06-boolean.js",
     "array": "nodemon ./js/05-array.js",
     "function": "nodemon ./js/04-function.js",
