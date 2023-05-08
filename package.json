@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "array": "nodemon ./js/05-array.js",
     "function": "nodemon ./js/04-function.js",
     "string": "nodemon ./js/03-string.js",
     "number": "nodemon ./js/02-number.js",
