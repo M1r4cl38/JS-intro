@@ -49,3 +49,24 @@ console.log(ona.movies.length); //spausdina movies kieki
 //                   objektas=0, pries pasirenkant nurodyti kuris objektas
 console.log(ona.movies[0]); //spausdina tik informacija apie pirma filma 
 console.log(ona.movies[0].title); //spausdina tik pirmo filmo pavadinima
+
+console.clear();
+
+//galima perrasyti reiksme - manipuliuoti VIDINE informacija
+
+const auto = { //pacio "auto" keisti negaliu
+    marke: 'Audi',
+}
+console.log(auto); // spausdina { marke: 'Audi' }
+
+auto.marke = ('Audine'); //perrasom vidine "auto" informacija
+console.log(auto); //spausdina { marke: 'Audine' }
+
+//objekto PAPILDYMAS nauja informacija:
+auto.kaina = 1000; 
+console.log(auto); // spausdina { marke: 'Audine', kaina: 1000 }
+console.log(auto.kaina); // spausdina tik kaina
+
+// PANAIKINTI objekte atributus:
+delete auto.kaina;
+console.log(auto); //spausdina { marke: 'Audine' }
