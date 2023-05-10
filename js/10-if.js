@@ -2,10 +2,14 @@ console.clear();
 
 /*
 IF - palyginimas
+
 Palyginimo operatoriai:
 visi: >, <, >=, <=, ==, ===, 
-naudotini: >, <, >=, <=, ===, !==
-nenaudotini: ==, !=
+naudotini: >, <, >=, <=, === (duomenu tipai turi sutapti), !==
+nenaudotini: == (tikrinamos vertes: '888' == 888 [sako, kad lygu]), !=
+
+Loginiai operatoriai:
+&& (and), || (or), ! (not)
 
 Kodo sablonai:
 if (uzduodamas klausimas) {rasoma ka daryti}
@@ -189,3 +193,85 @@ if (savaitesDiena === undefined) {
 }
 console.log(kokiaSavaitesDiena(siandienYra));
 console.log(kokiaSavaitesDiena(1));
+////////////////////////////////////////
+
+if (777 !== 8) {   // !== reiskia nelygu
+    console.log('nelygu');
+} else {
+    console.log('lygu');
+}
+
+console.clear();
+
+if ('888' === 888) {
+    console.log('taip');
+} else {
+    console.log('ne');
+}
+
+console.log('labas' * '2');
+
+// LOGINIAI OPERATORIAI
+
+if (4 > 2) {
+    if (8 < 20) {
+        console.log('>>> and 1');
+    }
+}
+
+if (4 > 2 && 8 < 20) {
+    console.log('>>> and 2');
+}
+
+if (1 < 0 || 2 < 4) {
+    console.log('>>> arba');
+}
+
+if ((0 === 0 || 2 === 8) && 4 === 4) {
+    console.log('mix');
+}
+
+/*  (0 === 0 || 2 === 8) && 4 === 4
+    (true || 2 === 8) && 4 === 4
+    (true || false) && 4 === 4
+    true && 4 === 4
+    true && true
+    true */
+
+/////////////// ! sauktukas apsuka teigini
+const a = true;
+
+if (!a) {
+    console.log('taip');
+} else {
+    console.log('ir ne');
+}
+
+const error = true;
+
+if (!error) {
+    console.log('all good 👍');
+} else {
+    console.log('ERROR');
+}
+
+/*visi skaiciai - TRUE, isskyrus 0 ir NaN
+ undefined - FALSE
+ null - FALSE
+ visi string - TRUE, isskyrus tuscias
+ visos function - TRUE
+ visi array - TRUE
+ visi object - TRUE */
+
+function empty() { }
+
+const nameInputValue = '';
+
+if (!nameInputValue) {
+    console.log('KAZKAS...');
+} else {
+    console.log('Ne Kazka...');
+}
+
+const negative = !!nameInputValue;
+console.log(negative);
