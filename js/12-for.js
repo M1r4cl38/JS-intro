@@ -93,3 +93,75 @@ for (let i=0; i < pazymiai.length; i++){     // "jei i dalinasi is 2 be liekanos
     console.log(i, '-', pazymiai[i]); 
     }
 }
+
+console.clear();
+
+for (let i = 0; i < 5; i++) {
+    console.log(i); 
+}
+/* spausdina:
+0
+1
+2
+3
+4 */
+
+// -5..6 ?
+//     i = nuo kur?; i < iki kur?; i++ zingsnio dydis. siuo atveju +1
+for (let i = -5; i < 7; i++) {
+    console.log(i);  // spausdina stulpeliu nuo -5 iki 6
+}
+
+// suapvalinti skaicius, kai zingsnis +=0.1:
+for (let i = 0; i < 2; i += 0.1) {
+    console.log(i.toFixed(), i);  // salia skaiciu po kablelio spausdina suapvalintus iki vienetu skaicius. 
+    // jei norime, kad apvalintu skaicius po kablelio, toFixed(rasome kiek skaiciu po kablelio apvalinti)
+    // apvalinant skaiciu pateikia string, todel su juo negalima atlikti matematiniu veiksmu
+}
+// kaip string convert i number?
+console.log('5', parseInt('5')); // parseFloat('5.14') grazintu skaiciu kartu su po kablelio
+// patikrinti:
+console.log(typeof '5', typeof parseInt('5')); // spausdina: string number
+
+// kaip prie suapvalinto prideti skaiciu?
+for (let i = 0; i < 2; i += 0.1) {
+  let suapvalintas = parseFloat(i.toFixed(3)); 
+    suapvalintas += 1;
+    console.log(suapvalintas, '-', i);
+}
+
+console.clear();
+
+// isspausdinti teksta pasimboliui:
+const text = 'Labas';
+
+for (let i = 0; i < text.length; i++) {
+    console.log(i, '-', text[i]);
+}
+/* spausdina:
+0 - L
+1 - a
+2 - b
+3 - a
+4 - s
+*/
+
+
+// spausdinti raides atbulai:
+
+for (let i = text.length -1; i >= 0; --i ) {
+    console.log(i, '-', text[i] );
+}
+
+// spausdinti atbulai, nekeiciant pirmos for eilutes:
+
+for (let i = 0; i < text.length; i++) {
+    console.log(i, '-', text[text.length - i - 1]);
+}
+
+// trecias budas spausdinti atbulai:
+
+for (let i = 0; i < text.length; i++) {
+    const index = text.length - i - 1;
+    console.log(i, '-', text[index]);
+}
