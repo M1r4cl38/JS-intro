@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "uzd-5": "nodemon ./uzd/5-string.js",
     "uzd-4": "nodemon ./uzd/4-biggest.js",
     "uzd-3": "nodemon ./uzd/3-number.js",
     "uzd-2": "nodemon ./uzd/2-multiply.js",
