@@ -118,6 +118,24 @@ do {
 
 console.log(`Do-While vidurkis: ${marksDoWhileSum / marksDoWhile.length}`);
 
+// FOR-IN
+
+const user = {
+    name: 'Petras',
+    age: 99,
+    isMarried: true,
+    key: 'didelis',
+};
+
+const userKeys = Object.keys(user);
+for (const key of userKeys) {
+    console.log(key, '=', user[key]);
+}
+
+for (const key in user) {
+    console.log(key, '=', user[key]);
+}
+
 
 // O toliau: cikliski metodai :)
 
