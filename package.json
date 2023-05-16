@@ -8,6 +8,7 @@
     "uzd-3": "nodemon ./uzd/3-number.js",
     "uzd-2": "nodemon ./uzd/2-multiply.js",
     "uzd-1": "nodemon ./uzd/1-empty.js",
+    "arrow": "nodemon ./js/13-arrow.js",
     "for": "nodemon ./js/12-for.js",
     "ternary": "nodemon ./js/11-ternary.js",
     "if": "nodemon ./js/10-if.js",
